@@ -15,11 +15,11 @@ namespace DobandaBancaDescendenta
 }
 class Clasa
 {
-    int calculatorRata(int sumaImprumutata, Decimal dobanda, int nrLuni)
+    int calculatorRata(int sumaImprumutata, Decimal dobanda, int nrLuni, int lunaDorita)
     {
         Decimal sumaDatorataPeLunaFaraDob = sumaImprumutata / nrLuni;
-
-        Decimal totalDobanda = sumaImprumutata * dobanda / 100; 
+        Decimal sumaRamasaFaraDob = sumaDatorataPeLunaFaraDob * (nrLuni - lunaDorita);
+        Decimal totalDobandaRamasa = sumaRamasaFaraDob  * dobanda / 100; 
 
         return 4;
     }
