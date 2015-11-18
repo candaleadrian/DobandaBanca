@@ -7,11 +7,16 @@ namespace DobandaBancaDescendenta
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CalculPtOLuna()
         {
-            
+            Assert.AreEqual(10.90, calculatorRata(100, 12, 10, 1));
         }
-        Decimal  calculatorRata(int sumaImprumutata, Decimal dobanda, int nrLuni, int lunaDorita)
+        [TestMethod]
+        public void CalculLuna2()
+        {
+            Assert.AreEqual(10.80, calculatorRata(100, 12, 10, 2));
+        }
+        Decimal calculatorRata(int sumaImprumutata, Decimal dobanda, int nrLuni, int lunaDorita)
         {
             Decimal sumaDatorataPeLunaFaraDob = sumaImprumutata / nrLuni;
             Decimal sumaRamasaFaraDob = sumaDatorataPeLunaFaraDob * (nrLuni - lunaDorita);
