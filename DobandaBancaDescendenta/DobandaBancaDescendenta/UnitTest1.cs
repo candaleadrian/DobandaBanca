@@ -14,16 +14,17 @@ namespace DobandaBancaDescendenta
         [TestMethod]
         public void CalculLuna2()
         {
-            Assert.AreEqual(10.80, calculatorRata(100, 12, 10, 2));
+            Assert.AreEqual(10.8, calculatorRata(100, 12, 10, 2));
         }
-        Decimal calculatorRata(int sumaImprumutata, Decimal dobanda, int nrLuni, int lunaDorita)
+        double  calculatorRata(int sumaImprumutata, Double  dobanda, int nrLuni, int lunaDorita)
         {
-            Decimal sumaDatorataPeLunaFaraDob = sumaImprumutata / nrLuni;
-            Decimal sumaRamasaFaraDob = sumaDatorataPeLunaFaraDob * (nrLuni - lunaDorita);
-            Decimal dobandaLunara = dobanda / 12 / 100;
-            Decimal rataPeLunaDorita = sumaDatorataPeLunaFaraDob + sumaRamasaFaraDob * dobandaLunara;
+            Double  sumaDatorataPeLunaFaraDob = sumaImprumutata / nrLuni;
+            Double sumaRamasaFaraDob = sumaDatorataPeLunaFaraDob * (nrLuni - lunaDorita);
+            Double dobandaLunara = dobanda / 12 / 100;
+            Double rataPeLunaDorita = sumaDatorataPeLunaFaraDob + sumaRamasaFaraDob * dobandaLunara;
 
             return rataPeLunaDorita;
+            //return 5.8;
         }
 
     }
